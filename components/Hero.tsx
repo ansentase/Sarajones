@@ -17,22 +17,23 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-12"
         >
           <div className="inline-block relative max-w-full">
             <motion.div 
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }} 
               transition={{ delay: 0.8 }}
-              className="absolute -top-8 md:-top-12 left-2 md:-left-8 font-accent text-pink-500 text-4xl md:text-6xl lg:text-7xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
+              className="absolute -top-12 md:-top-16 left-2 md:-left-12 font-accent text-pink-500 text-4xl md:text-6xl lg:text-7xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
             >
               Stop
             </motion.div>
-            <h1 className="font-heading text-[8.2vw] md:text-[8vw] lg:text-[95px] font-black text-white leading-[1] tracking-tighter uppercase px-2 mb-2">
+            <h1 className="font-heading text-[8.2vw] md:text-[8vw] lg:text-[95px] font-black text-white leading-[0.9] tracking-tighter uppercase px-2">
               OVERPAYING
             </h1>
           </div>
-          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight uppercase mt-2 md:mt-4">
+          
+          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight uppercase mt-8 md:mt-10 lg:mt-12">
             THE <span className="gradient-gold font-serif-lux italic tracking-normal">IRS</span>
           </h2>
         </motion.div>
