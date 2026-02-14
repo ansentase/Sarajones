@@ -28,11 +28,11 @@ const Hero: React.FC = () => {
             >
               Stop
             </motion.div>
-            <h1 className="font-heading text-[8.2vw] md:text-[8vw] lg:text-[95px] font-black text-white leading-none tracking-tighter uppercase px-2">
+            <h1 className="font-heading text-[8.2vw] md:text-[8vw] lg:text-[95px] font-black text-white leading-[1] tracking-tighter uppercase px-2 mb-2">
               OVERPAYING
             </h1>
           </div>
-          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight uppercase mt-1 md:-mt-6">
+          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight uppercase mt-2 md:mt-4">
             THE <span className="gradient-gold font-serif-lux italic tracking-normal">IRS</span>
           </h2>
         </motion.div>
