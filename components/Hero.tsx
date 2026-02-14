@@ -24,15 +24,15 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }} 
               transition={{ delay: 0.8 }}
-              className="absolute -top-10 md:-top-16 left-2 md:-left-12 font-accent text-pink-500 text-5xl md:text-8xl lg:text-9xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
+              className="absolute -top-8 md:-top-12 left-2 md:-left-8 font-accent text-pink-500 text-4xl md:text-6xl lg:text-7xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
             >
               Stop
             </motion.div>
-            <h1 className="font-heading text-[8.2vw] md:text-[10vw] lg:text-[120px] font-black text-white leading-none tracking-tighter uppercase break-words md:break-normal px-2">
+            <h1 className="font-heading text-[8.2vw] md:text-[8vw] lg:text-[95px] font-black text-white leading-none tracking-tighter uppercase px-2">
               OVERPAYING
             </h1>
           </div>
-          <h2 className="font-heading text-3xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight uppercase mt-0 md:-mt-8">
+          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight uppercase mt-1 md:-mt-6">
             THE <span className="gradient-gold font-serif-lux italic tracking-normal">IRS</span>
           </h2>
         </motion.div>
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="text-zinc-400 text-sm md:text-2xl max-w-3xl mx-auto leading-relaxed font-light mb-12 px-2"
+          className="text-zinc-400 text-sm md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed font-light mb-12 px-2"
         >
           Turn the money you're already overpaying in taxes into <span className="text-white font-bold">real, tax-free, generational wealth</span>. Discover the roadmap to the <span className="text-pink-500 font-bold neon-text-pink">Tax-Free Empire</span>.
         </motion.p>
