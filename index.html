@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Free Millionaire & Fire My CPA | Sarah Jones CPA</title>
+  <meta name="description" content="Stop overpaying taxes. Learn billionaire strategies from licensed CPA Sarah Jones. Get both books + discover the Build. Protect. Grow. roadmap.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@800;900&family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-heading { font-family: 'Montserrat', sans-serif; }
+    .font-accent { font-family: 'Sacramento', cursive; }
+    .font-serif-lux { font-family: 'Playfair Display', serif; }
+    
+    .neon-text-pink {
+      text-shadow: 0 0 5px #FF007F, 0 0 10px #FF007F, 0 0 20px #FF007F;
+    }
+    .neon-text-gold {
+      text-shadow: 0 0 5px #D4AF37, 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+    }
+    .neon-border-pink {
+      box-shadow: 0 0 5px #FF007F, inset 0 0 5px #FF007F;
+      border: 1px solid #FF007F;
+    }
+    .neon-border-gold {
+      box-shadow: 0 0 5px #D4AF37, inset 0 0 5px #D4AF37;
+      border: 1px solid #D4AF37;
+    }
+    
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.3; }
+    }
+    .animate-flicker {
+      animation: flicker 4s infinite alternate;
+    }
+    
+    .bokeh-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
+    }
+    .bokeh-particle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(25px);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    
+    .gradient-gold {
+      background: linear-gradient(135deg, #D4AF37 0%, #F5F5DC 50%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
