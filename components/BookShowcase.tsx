@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BOOKS } from '../constants';
+import { BOOKS } from '../constants.ts';
 
 const BookShowcase: React.FC = () => {
   return (
@@ -45,20 +45,26 @@ const BookShowcase: React.FC = () => {
                       <div className="absolute inset-0 bg-[#080808]" />
                     )}
 
-                    {/* Sarah Portrait Placeholder (User would replace with actual JPGs) */}
-                    <div className="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60">
+                    {/* Sarah Portrait - Using the provided image files */}
+                    <div className="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-700 opacity-90">
                        <img 
-                         src={book.id === 'tax-free-millionaire' ? 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800' : 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800'} 
+                         src={book.image} 
                          className="w-full h-full object-cover object-top"
-                         alt="Sarah Jones"
+                         alt={book.title}
+                         onError={(e) => {
+                           // Fallback if image not found in root
+                           e.currentTarget.src = book.id === 'tax-free-millionaire' 
+                             ? 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800'
+                             : 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800';
+                         }}
                        />
                     </div>
                     
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
 
-                    {/* Content Layout matching JPGs */}
-                    <div className="relative z-10 h-full flex flex-col p-6 md:p-10 justify-between">
-                       {/* Top Text for "Fire MY CPA" */}
+                    {/* Content Layout matching JPGs (Overlaid to ensure high visibility) */}
+                    <div className="relative z-10 h-full flex flex-col p-6 md:p-10 justify-between pointer-events-none">
+                       {/* Labels matching the actual cover text positions */}
                        {book.id === 'fire-my-cpa' ? (
                          <div className="text-center">
                             <p className="text-white font-heading font-black text-[10px] md:text-[12px] uppercase tracking-[0.4em] opacity-80">
@@ -67,22 +73,16 @@ const BookShowcase: React.FC = () => {
                          </div>
                        ) : <div />}
 
-                       {/* Central Titles */}
                        <div className="text-center">
-                          <span className={`block font-accent text-6xl md:text-8xl text-pink-500 neon-text-pink mb-[-15px] md:mb-[-25px] transform -rotate-3`}>
-                            {book.title}
-                          </span>
-                          <span className={`block font-heading text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none ${book.theme === 'gold' ? 'gradient-gold drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]' : 'text-white drop-shadow-[0_4px_10px_rgba(255,255,255,0.2)]'}`}>
-                            {book.subtitle}
-                          </span>
+                          {/* Visual spacers to allow the image text to show through if it's there */}
+                          <div className="h-20" /> 
                        </div>
 
-                       {/* Bottom Text for "Tax Free Millionaire" */}
                        <div className="text-center">
                           {book.id === 'tax-free-millionaire' ? (
                             <div className="pt-4 border-t border-white/10">
                               <p className="text-white font-heading font-black text-[10px] md:text-[12px] uppercase tracking-[0.3em]">
-                                SARAH JONES, CPA <span className="text-pink-500 italic">and</span> PHIL JONES
+                                SARAH JONES, CPA <span className="text-pink-500 italic lowercase">and</span> PHIL JONES
                               </p>
                             </div>
                           ) : (

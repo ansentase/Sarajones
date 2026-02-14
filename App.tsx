@@ -1,15 +1,15 @@
 
 import React, { useEffect, useState } from 'react';
-import Hero from './components/Hero';
-import ProblemAgitation from './components/ProblemAgitation';
-import TheBetterWay from './components/TheBetterWay';
-import Authority from './components/Authority';
-import BookShowcase from './components/BookShowcase';
-import Testimonials from './components/Testimonials';
-import Roadmap from './components/Roadmap';
-import FinalCTA from './components/FinalCTA';
-import FloatingBanner from './components/FloatingBanner';
-import Navbar from './components/Navbar';
+import Hero from './components/Hero.tsx';
+import ProblemAgitation from './components/ProblemAgitation.tsx';
+import TheBetterWay from './components/TheBetterWay.tsx';
+import Authority from './components/Authority.tsx';
+import BookShowcase from './components/BookShowcase.tsx';
+import Testimonials from './components/Testimonials.tsx';
+import Roadmap from './components/Roadmap.tsx';
+import FinalCTA from './components/FinalCTA.tsx';
+import FloatingBanner from './components/FloatingBanner.tsx';
+import Navbar from './components/Navbar.tsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const App: React.FC = () => {
@@ -37,7 +37,7 @@ const App: React.FC = () => {
               backgroundColor: i % 2 === 0 ? '#FF007F' : '#D4AF37',
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${Math.random() * 20 + 10}s infinite ease-in-out`
+              animation: `float-${i} ${Math.random() * 20 + 10}s infinite ease-in-out`
             }}
           />
         ))}
@@ -72,10 +72,12 @@ const App: React.FC = () => {
       </footer>
 
       <style>{`
-        @keyframes float {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px) scale(1.1); }
-        }
+        ${[...Array(15)].map((_, i) => `
+          @keyframes float-${i} {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 0.5) * 100}px) scale(1.1); }
+          }
+        `).join('\n')}
       `}</style>
     </div>
   );
