@@ -12,27 +12,27 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="inline-block relative">
+          <div className="inline-block relative max-w-full">
             <motion.div 
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }} 
               transition={{ delay: 0.8 }}
-              className="absolute -top-10 md:-top-16 left-0 md:-left-16 font-accent text-pink-500 text-5xl md:text-9xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
+              className="absolute -top-10 md:-top-16 left-2 md:-left-12 font-accent text-pink-500 text-5xl md:text-8xl lg:text-9xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
             >
               Stop
             </motion.div>
-            <h1 className="font-heading text-[9vw] md:text-[150px] font-black text-white leading-none tracking-tighter uppercase">
+            <h1 className="font-heading text-[8.2vw] md:text-[10vw] lg:text-[120px] font-black text-white leading-none tracking-tighter uppercase break-words md:break-normal px-2">
               OVERPAYING
             </h1>
           </div>
-          <h2 className="font-heading text-3xl md:text-8xl font-black text-white leading-none tracking-tight uppercase mt-0 md:-mt-10">
+          <h2 className="font-heading text-3xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight uppercase mt-0 md:-mt-8">
             THE <span className="gradient-gold font-serif-lux italic tracking-normal">IRS</span>
           </h2>
         </motion.div>
