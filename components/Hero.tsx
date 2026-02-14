@@ -17,14 +17,14 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="mb-12"
+          className="mb-10"
         >
           <div className="inline-block relative max-w-full">
             <motion.div 
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }} 
               transition={{ delay: 0.8 }}
-              className="absolute -top-12 md:-top-16 left-2 md:-left-12 font-accent text-pink-500 text-4xl md:text-6xl lg:text-7xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
+              className="absolute -top-10 md:-top-16 left-2 md:-left-12 font-accent text-pink-500 text-4xl md:text-6xl lg:text-7xl animate-flicker neon-text-pink -rotate-12 select-none z-20"
             >
               Stop
             </motion.div>
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             </h1>
           </div>
           
-          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight uppercase mt-8 md:mt-10 lg:mt-12">
+          <h2 className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight uppercase mt-5 md:mt-6 lg:mt-6">
             THE <span className="gradient-gold font-serif-lux italic tracking-normal">IRS</span>
           </h2>
         </motion.div>
